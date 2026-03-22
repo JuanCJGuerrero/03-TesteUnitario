@@ -139,6 +139,17 @@ public class ContaTests
         Assert.Throws<InvalidOperationException>(() => conta.Sacar(200));
     }
 
+    [Fact]
+    public void Sacar_ContaInativa_LancaInvalidOperationException()
+    {
+        // Arrange
+        var conta = new Conta("Maria", 0);
+        conta.Encerrar(); // requer Encerrar() implementado!
+
+        // Act & Assert
+        Assert.Throws<InvalidOperationException>(() => conta.Sacar(10));
+    }
+
     // =======================================================
     //  PARTE 2 — ESCREVA OS TESTES ABAIXO (TDD)
     //  Lembre-se: escreva o teste PRIMEIRO, veja FALHAR (Red),
