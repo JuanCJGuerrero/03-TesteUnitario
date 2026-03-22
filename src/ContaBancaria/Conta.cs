@@ -56,7 +56,8 @@ public class Conta
     /// </summary>
     public void Sacar(decimal valor)
     {
-
+        if (valor <= 0)
+            throw new ArgumentException("O valor deve ser maior que zero.", nameof(valor));
 
         Saldo -= valor;
     }
