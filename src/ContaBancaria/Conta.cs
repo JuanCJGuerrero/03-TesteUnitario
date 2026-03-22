@@ -41,11 +41,9 @@ public class Conta
     ///   - Valor deve ser maior que zero (lançar ArgumentException).
     ///   - Conta deve estar ativa (lançar InvalidOperationException).
     ///   - O saldo deve ser atualizado corretamente.
-    /// </summary>
     public void Depositar(decimal valor)
     {
-        // TODO: Implemente usando TDD
-        throw new NotImplementedException();
+        Saldo += valor;
     }
 
     /// <summary>
