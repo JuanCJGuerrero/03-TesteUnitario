@@ -129,7 +129,15 @@ public class ContaTests
         Assert.Throws<ArgumentException>(() => conta.Sacar(-50));
     }
 
+    [Fact]
+    public void Sacar_SaldoInsuficiente_LancaInvalidOperationException()
+    {
+        // Arrange
+        var conta = new Conta("Maria", 100);
 
+        // Act & Assert
+        Assert.Throws<InvalidOperationException>(() => conta.Sacar(200));
+    }
 
     // =======================================================
     //  PARTE 2 — ESCREVA OS TESTES ABAIXO (TDD)
