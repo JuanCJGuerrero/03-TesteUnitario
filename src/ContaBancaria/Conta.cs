@@ -55,12 +55,14 @@ public class Conta
     ///   - O saldo deve ser atualizado corretamente.
     /// </summary>
     public void Sacar(decimal valor)
-    {
-        if (valor <= 0)
-            throw new ArgumentException("O valor deve ser maior que zero.", nameof(valor));
+{
+    if (valor <= 0)
+        throw new ArgumentException("O valor deve ser maior que zero.", nameof(valor));
+    if (valor > Saldo)
+        throw new InvalidOperationException("Saldo insuficiente.");
 
-        Saldo -= valor;
-    }
+    Saldo -= valor;
+}
 
     /// <summary>
     /// Transfere valor desta conta para outra.
