@@ -56,8 +56,7 @@ public class Conta
     /// </summary>
     public void Sacar(decimal valor)
     {
-        // TODO: Implemente usando TDD
-        throw new NotImplementedException();
+        Saldo -= valor;
     }
 
     /// <summary>

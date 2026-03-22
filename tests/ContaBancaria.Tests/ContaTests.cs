@@ -95,7 +95,6 @@ public class ContaTests
         Assert.Equal(150, conta.Saldo);
     }
 
-
     [Fact]
     public void Sacar_ValorValido_AtualizaSaldo()
     {
@@ -108,6 +107,7 @@ public class ContaTests
         // Assert
         Assert.Equal(120, conta.Saldo);
     }
+
 
     // =======================================================
     //  PARTE 2 — ESCREVA OS TESTES ABAIXO (TDD)
